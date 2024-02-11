@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import random
+import string
+
+def generate_password(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+
+password_length = 8  
+new_password = generate_password(password_length)
+print(f"Сгенерированный пароль: {new_password}")
